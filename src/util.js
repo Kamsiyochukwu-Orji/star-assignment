@@ -1,9 +1,14 @@
 // - named export
 export function range(start, end, step = 1) {
   const output = []
-
+if(end === undefined){
+  end = start;
+  start = 0;
+}
   //  implement a range function
-
+for(let i = start; i < end; i+=step ){
+  output.push(i)
+}
   return output
 }
 
